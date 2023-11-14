@@ -1,0 +1,46 @@
+namespace Prime_numbers
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        //Prime numbers
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+
+            int num = 55;
+            int a = 0;
+            for (int i=2; i<num;i++)
+            {
+                if (num % i == 0)
+                {
+                    a++;
+                }
+            }
+            if (a == 0)
+            { 
+                Console.WriteLine("Given number is a prime number"); 
+            }
+            else 
+            { 
+                Console.WriteLine("Given number is not a prime number");
+            }
+        }
+        //Swap two numbers
+
+        [TestMethod]    
+
+        public void TestMethod2()
+        {
+            int a = 10;
+            int b = 15;
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            Console.WriteLine("After swapping: a = " + a + ", b = " + b);
+        }
+    }
+    }

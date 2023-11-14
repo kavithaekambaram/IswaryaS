@@ -1,0 +1,57 @@
+namespace Basicprograms
+{
+    [TestClass]
+    public class UnitTest1
+        //Second Largest number
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+            int a = 100;
+            int b = 60;
+            int c = 70;
+
+            int highest, secondHighest;
+
+            if (a >= b && a >= c)
+            {
+                highest = a;
+                if (b >= c)
+                {
+                    secondHighest = b;
+                }
+                else
+                {
+                    secondHighest = c;
+                }
+            }
+            else if (b >= a && b >= c)
+            {
+                highest = b;
+                if (a >= c)
+                {
+                    secondHighest = a;
+                }
+                else
+                {
+                    secondHighest = c;
+                }
+            }
+            else
+            {
+                highest = c;
+                if (a >= b)
+                {
+                    secondHighest = a;
+                }
+                else
+                {
+                    secondHighest = b;
+                }
+            }
+
+            Console.WriteLine("Second Highest Value: " + secondHighest);
+
+        }
+    }
+}
