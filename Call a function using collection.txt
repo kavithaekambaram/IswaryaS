@@ -1,0 +1,106 @@
+using System.Security.Cryptography.X509Certificates;
+
+namespace Csharpcollections
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void String()
+        {
+
+            string[] names = new string[5];
+
+
+            names[0] = "Ishu";
+            names[1] = "Priya";
+            names[2] = "Gokila";
+            names[3] = "David";
+            names[4] = "Kavitha";
+
+
+            Console.WriteLine("List of Names:");
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.WriteLine(names[i]);
+
+
+            }
+        }
+
+        [TestMethod]
+
+        public void Arrays()
+        {
+            int[] myNumbers = { 5, 1, 8, 9, 6, 3, 11 };
+            Array.Sort(myNumbers);
+            Array.Reverse(myNumbers);
+            foreach (int i in myNumbers)
+            {
+                Console.WriteLine(i);
+            }
+
+
+        }
+
+
+
+        [TestMethod]
+        public void List()
+        {
+
+
+            List<string> namesList = new List<string>();
+
+            // Add names to the List
+            namesList.Add("Alice");
+            namesList.Add("Bob");
+            namesList.Add("Charlie");
+
+
+            Console.WriteLine("Names in the List:");
+            foreach (string name in namesList)
+            {
+                Console.WriteLine(name);
+            }
+        }
+
+        [TestMethod]
+        public void Hashsett()
+        {
+
+            HashSet<string> myhash = new HashSet<string>();
+
+
+            myhash.Add("C");
+            myhash.Add("C++");
+            myhash.Add("C#");
+            myhash.Add("Java");
+            myhash.Add("Ruby");
+            Console.WriteLine("My elements:");
+
+
+            foreach (var value in myhash)
+            {
+                Console.WriteLine(value);
+            }
+        }
+    }
+
+        [TestClass]
+        public class test
+        {
+
+            [TestMethod]
+        public void method()
+        {
+
+            UnitTest1 unitTest = new UnitTest1();
+            unitTest.String();
+            unitTest.Arrays();
+            unitTest.List();
+            unitTest.Hashsett();
+
+        }
+    }
+}

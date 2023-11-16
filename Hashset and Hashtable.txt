@@ -1,0 +1,59 @@
+using System.Collections;
+
+namespace Hashtable_and_hashset
+//Hashtable
+{
+    [TestClass]
+    public class UnitTest3
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+
+
+            Hashtable myTable = new Hashtable();
+
+            myTable.Add("Contact num", 123456);
+            myTable.Add("Id", 13);
+            myTable.Add("Name", "Iswarya");
+            myTable.Add("Address", "Cornelia Street");
+
+
+            Console.WriteLine(myTable["Name"]);
+
+            //To change the address
+            Console.WriteLine(" Address before changing: " + myTable["Address"]);
+            myTable["Address"] = "Ontario";
+            Console.WriteLine(" Address after changing: " + myTable["Address"]);
+
+
+        }
+
+        //Hashset
+        [TestMethod]
+        public void TestMethod2()
+        {
+
+            HashSet<string> myhash = new HashSet<string>();
+
+
+            myhash.Add("C");
+            myhash.Add("C++");
+            myhash.Add("C#");
+            myhash.Add("Java");
+            myhash.Add("Ruby");
+            Console.WriteLine("My elements:");
+
+
+            foreach (var value in myhash)
+            {
+                Console.WriteLine(value);
+            }
+        }
+    }
+}
+
+
+
+
+

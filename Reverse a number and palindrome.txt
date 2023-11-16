@@ -1,0 +1,50 @@
+namespace Reverse_a_number
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        //REVERSE A NUMBER
+        {
+            int num = 123456;
+            int reversedNumber = 0;
+
+            while (num > 0)
+            {
+                int digit = num % 10;
+                reversedNumber = (reversedNumber * 10) + digit;
+                num = num / 10;
+            }
+
+            Console.WriteLine("Reversed Number: " + reversedNumber);
+
+        }
+
+        //PALINDROME
+        [TestMethod]
+        public void TestMethod2()
+        {
+            int number = 12321;
+            int originalNumber = number;
+            int reversedNumber = 0;
+
+            while (number > 0)
+            {
+                int digit = number % 10; 
+                reversedNumber = (reversedNumber * 10) + digit; 
+                number = number / 10; 
+            }
+
+            if (originalNumber == reversedNumber)
+            {
+                Console.WriteLine(originalNumber + " is a palindrome.");
+            }
+            else
+            {
+                Console.WriteLine(originalNumber + " is not a palindrome.");
+            }
+
+        }
+    }
+}
